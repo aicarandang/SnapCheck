@@ -64,7 +64,7 @@ function UploadSheets({ sheetId, onSeeResults }) {
         formData.append('test_info', JSON.stringify(testInfo));
         formData.append('answer_key', JSON.stringify(answerKey));
         
-        const apiUrl = import.meta.env.DEV ? 'http://localhost:5000/api' : 'https://snapcheck-production.up.railway.app/api';
+        const apiUrl = import.meta.env.VITE_API_BASE_URL;
         const res = await fetch(`${apiUrl}/check`, {
           method: 'POST',
           body: formData,
