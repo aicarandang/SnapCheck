@@ -48,10 +48,10 @@ function Results({ sheetId, sheetName }) {
   };
 
   const getAnnotatedFileName = (originalName) => {
-    if (!originalName) return 'annotated_paper_results';
+    if (!originalName) return 'annotated_paper_results.png';
     const dotIdx = originalName.lastIndexOf('.');
-    if (dotIdx === -1) return originalName + ' results';
-    return originalName.slice(0, dotIdx) + ' results' + originalName.slice(dotIdx);
+    if (dotIdx === -1) return originalName + ' results.png';
+    return originalName.slice(0, dotIdx) + ' results.png';
   };
 
   const handleToggleExpand = idx => {
