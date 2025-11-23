@@ -1,6 +1,8 @@
-FROM python:3.11-slim
+FROM python:3.11-slim-bullseye
 
-RUN apt-get update -y || (sleep 5 && apt-get update -y) && \
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     tesseract-ocr \
     libgl1-mesa-glx \
